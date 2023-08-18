@@ -23,7 +23,7 @@ body{
     display: grid;
     grid-template-columns:  repeat(10, 1fr);
     grid-template-rows: 130vh repeat(4 , 1fr);
-    background-image: linear-gradient(to left , orange , rgb(207, 194, 150) ) , url('Untitled.png');
+    background-image: linear-gradient(to left , orange , rgb(207, 194, 150) ) , url('./Untitled.png');
 }
 
 .full-sign{
@@ -38,10 +38,11 @@ body{
     
 }
 
+
 .pic{
     grid-column: 1/4;
     grid-row: 1/5;
-    background-image: url('food.jpg');
+    background-image: url('./food.jpg');
     background-size: cover;
     border-radius: 20px;
     border-bottom-right-radius: 0;
@@ -59,7 +60,7 @@ body{
     border-top-left-radius: 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4 , 1fr);
+    grid-template-rows: repeat(8 , 1fr);
     
 }
 
@@ -213,6 +214,10 @@ body{
     background-color:  rgb(24, 22, 22);
     border: 2px solid orange; 
     color: aliceblue;
+    grid-column: 2/4;
+    grid-row: 6/5;
+    align-self: center;
+    justify-self: center;
 }
 
 .email{
@@ -221,6 +226,10 @@ body{
     background-color:  rgb(24, 22, 22);
     border: 2px solid orange;
     color: aliceblue;
+    grid-column: 2/4;
+    grid-row: 4/5;
+    align-self: end;
+    justify-self: center;
 }
 
 .phone{
@@ -237,19 +246,49 @@ body{
     background-color:  rgb(24, 22, 22);
     border: 2px solid orange;
     color: aliceblue;
+    grid-column: 2/4;
+    grid-row: 7/6;
+    justify-self: center;
+}
+
+.list-g{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: end;
+    width: 200px; height:35px;
+    border-radius: 15px;
+    background-color: rgb(24, 22, 22);
+    border: 2px solid orange;
+}
+
+@media screen and (max-width:757px) {
+    .pic{
+        visibility: hidden;
+    }
+
+    .inform{
+        grid-column:1/10;
+        border-top-left-radius: 20px ;
+        border-bottom-left-radius: 20px;
+    }
+
+    
 }
 
 .but{
-    grid-row: 4/5;
+    grid-row: 7/8;
     grid-column: 1/5;
     width: 200px; height: 35px;
-    margin-left: 145px;
-    margin-top: 35px;
+    /* margin-left: 145px;
+    margin-top: 35px; */
     border-radius: 16px;
     background-color: rgb(57, 177, 41);
-    border: 1px solid black;
+    border: 0.5px solid rgb(57, 177, 41);
     color: aliceblue;
     transition: 0.3s;
+    align-self: start;
+    justify-self: center;
 }
 
 .but:hover{
